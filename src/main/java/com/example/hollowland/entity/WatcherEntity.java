@@ -22,7 +22,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.EnumSet;
@@ -52,7 +52,7 @@ public class WatcherEntity extends Monster {
     }
 
     /** Rare: only spawns in the dark, and only one time in eight when the normal rules allow it. */
-    public static boolean checkWatcherSpawnRules(EntityType<WatcherEntity> type, LevelAccessor level,
+    public static boolean checkWatcherSpawnRules(EntityType<WatcherEntity> type, ServerLevelAccessor level,
                                                  MobSpawnType reason, BlockPos pos, RandomSource random) {
         return Monster.checkMonsterSpawnRules(type, level, reason, pos, random) && random.nextInt(8) == 0;
     }
