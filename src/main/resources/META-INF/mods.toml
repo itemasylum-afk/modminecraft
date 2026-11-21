@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="hollowland"
+version="1.0.0"
+displayName="Hollowland"
+description='''
+Two entities and one dimension.
+
+The Watcher only moves when you are not looking at it. Hold its gaze for too long and it takes you
+to the Hollowland, a dark grey plain where Hollow Children hunt. You are let go after five minutes.
+'''
+
+[[dependencies.hollowland]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.hollowland]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
